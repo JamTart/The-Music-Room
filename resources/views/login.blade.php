@@ -1,5 +1,6 @@
 @extends('layouts.master')
 @extends('layouts.footer')
+@extends('layouts.header')
  <!--@section('title', 'Page Title')
 
 @section('sidebar')
