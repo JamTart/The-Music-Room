@@ -59,7 +59,7 @@
                                  <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
                              </div>
                              <div id="register-link" class="text-right">
-                                 <a href="#" class="text-info">Not yet a member?</a>
+                                 <a href="register" class="text-info">Not yet a member?</a>
                              </div>
                          </form>
                      </div>
