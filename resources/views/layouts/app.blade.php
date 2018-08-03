@@ -47,12 +47,23 @@
                       <!-- connections/friends icon-->
                         <li style ="padding-right: 2.5em; " class ="nav-item">
                         <i class="fas fa-user-friends"></i>
+                      </li>
 
                       <!-- Messages icon-->
-                      </li>
+
                       <li style ="padding-right: 2.5em; " class ="nav-item">
                           <i class="fas fa-comment-alt"></i>
                       </li>
+                      <!-- Notifications icon -->
+                      <li style ="padding-right: 2.5em; " class ="nav-item">
+                        <i class="fas fa-bell"></i>
+                      </li>
+
+                      <!-- gigs icon -->
+                      <li style ="padding-right: 2.5em; " class ="nav-item">
+                      <i class="fas fa-music"></i>
+                    </li>
+
 
                     </ul>
                     <!-- search bar  begin -->
@@ -86,7 +97,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                  
+
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
