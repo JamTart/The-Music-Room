@@ -19,6 +19,12 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- link for icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- fontawesome link -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 <body>
     <div id="app">
@@ -34,8 +40,33 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                      <!-- Home icon -->
+                      <li style ="padding-right: 2.5em; " class ="nav-item">
+                        <i class="fas fa-home"></i>
+                      </li>
+                      <!-- connections/friends icon-->
+                        <li style ="padding-right: 2.5em; " class ="nav-item">
+                        <i class="fas fa-user-friends"></i>
+
+                      <!-- Messages icon-->
+                      </li>
+                      <li style ="padding-right: 2.5em; " class ="nav-item">
+                          <i class="fas fa-comment-alt"></i>
+                      </li>
 
                     </ul>
+                    <!-- search bar  begin -->
+                    <div id ="nav-search ">
+                        <form class="form" >
+                          <div class="input-group">
+                              <input class="form-control" type="text" placeholder="Search" aria-label="Search" style="padding-left: 20px; width:20em; border-radius: 40px;" id="mysearch">
+                              <div class="input-group-addon" style="margin-left: -50px; z-index: 3; border-radius: 40px; background-color: transparent; border:none;">
+                                <button class="btn btn-warning btn-sm" type="submit" style="border-radius: 20px; margin-top:4px;" id="search-btn"><i class="fa fa-search"></i></button>
+                              </div>
+                          </div>
+                        </form>
+                    </div>
+                    <!-- Search bar end -->
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -49,16 +80,21 @@
                             </li>
                         @else
                             <li class="nav-item dropdown">
+
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                  
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
+                                        <i class="fas fa-power-off"></i>
                                     </a>
+
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
