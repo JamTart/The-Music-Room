@@ -11,6 +11,7 @@
 </head>
 
 @extends('layouts.app')
+    @extends('layouts.footer')
 
 @section('content')
 <!-- Modal what's on your mind -->
